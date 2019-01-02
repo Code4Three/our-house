@@ -12,62 +12,60 @@ class JobsBoard extends Component {
 
     this.incUserId = this.incUserId.bind(this)
     this.decUserId = this.decUserId.bind(this)
-    this.state = { userId: 1 }
+    this.allMongodbOurHouseJobs = this.props.data.allMongodbOurHouseJobs
+    this.state = {
+      userId: 0,
+      users: this.allMongodbOurHouseJobs.edges,
+      numUsers: this.allMongodbOurHouseJobs.edges.length,
+    }
   }
 
   incUserId() {
-    if (!(this.state.userId >= 5)) {
+    if (!(this.state.userId >= this.state.numUsers - 1)) {
       this.setState({
         userId: this.state.userId + 1,
       })
     } else {
       this.setState({
-        userId: 1,
-        allMongodbOurHouseJobs: this.props.data,
-        residents: this.allMongodbOurHouseJobs.edges.find(
-          user => user.node.userId === this.state.userId
-        ),
-        numResidents: this.allMongodbOurHouseJobs.edges.length,
+        userId: 0,
       })
     }
   }
 
   decUserId() {
-    if (!(this.state.userId <= 1)) {
+    if (!(this.state.userId - 1 <= 0)) {
       this.setState({
         userId: this.state.userId - 1,
       })
     } else {
       this.setState({
-        userId: 5,
+        userId: this.state.numUsers - 1,
       })
     }
   }
 
   render() {
-    const { allMongodbOurHouseJobs } = this.props.data
-    const residents = allMongodbOurHouseJobs.edges.find(
-      user => user.node.userId === this.state.userId
-    )
-    const numResidents = allMongodbOurHouseJobs.edges.length
-    console.log(allMongodbOurHouseJobs.edges.length)
-    console.log(this.state.residents)
-    console.log(this.state)
+    //const { allMongodbOurHouseJobs } = this.props.data
+    //const residents = allMongodbOurHouseJobs.edges.find(
+    //  user => user.node.userId === this.state.userId
+    //)
+    //const numResidents = allMongodbOurHouseJobs.edges.length
+    const currentUser = this.state.users[this.state.userId].node
     return (
       <Layout>
         <SEO title="Jobs Board" />
         <UserCard
           incAction={this.incUserId}
           decAction={this.decUserId}
-          user={residents.node.userName}
+          user={currentUser.userName}
         />
-        <JobCard day="Monday" job={residents.node.Monday} />
-        <JobCard day="Tuesday" job={residents.node.Tuesday} />
-        <JobCard day="Wednesday" job={residents.node.Wednesday} />
-        <JobCard day="Thursday" job={residents.node.Thursday} />
-        <JobCard day="Friday" job={residents.node.Friday} />
-        <JobCard day="Saturday" job={residents.node.Saturday} />
-        <JobCard day="Sunday" job={residents.node.Sunday} />
+        <JobCard day="Monday" job={currentUser.Monday} />
+        <JobCard day="Tuesday" job={currentUser.Tuesday} />
+        <JobCard day="Wednesday" job={currentUser.Wednesday} />
+        <JobCard day="Thursday" job={currentUser.Thursday} />
+        <JobCard day="Friday" job={currentUser.Friday} />
+        <JobCard day="Saturday" job={currentUser.Saturday} />
+        <JobCard day="Sunday" job={currentUser.Sunday} />
       </Layout>
     )
   }
