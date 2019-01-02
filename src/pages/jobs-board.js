@@ -20,6 +20,7 @@ class JobsBoard extends Component {
     }
   }
 
+  //increment the user id
   incUserId() {
     if (!(this.state.userId >= this.state.numUsers - 1)) {
       this.setState({
@@ -32,6 +33,7 @@ class JobsBoard extends Component {
     }
   }
 
+  //decrement the user id
   decUserId() {
     if (!(this.state.userId - 1 <= 0)) {
       this.setState({
