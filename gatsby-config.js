@@ -16,13 +16,13 @@ module.exports = {
         auth: { user: `our_house`, password: `our_house1` },
       },
     },
-    {
+    /*{
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
-    },
+    },*/
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
