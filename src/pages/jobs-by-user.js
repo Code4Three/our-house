@@ -10,9 +10,13 @@ class JobsBoard extends Component {
   constructor(props) {
     super(props)
 
+    //bind functions to constructor
     this.incUserId = this.incUserId.bind(this)
     this.decUserId = this.decUserId.bind(this)
+
+    //get data from graphql query
     this.allMongodbOurHouseJobs = this.props.data.allMongodbOurHouseJobs
+
     this.state = {
       userId: 0,
       users: this.allMongodbOurHouseJobs.edges,
@@ -21,6 +25,7 @@ class JobsBoard extends Component {
   }
 
   //increment the user id
+  //gets passed to child component and then enacted from button click to update this.state
   incUserId() {
     if (!(this.state.userId >= this.state.numUsers - 1)) {
       this.setState({
@@ -34,6 +39,7 @@ class JobsBoard extends Component {
   }
 
   //decrement the user id
+  //gets passed to child component and then enacted from button click to update this.state
   decUserId() {
     if (!(this.state.userId - 1 <= 0)) {
       this.setState({
@@ -47,11 +53,6 @@ class JobsBoard extends Component {
   }
 
   render() {
-    //const { allMongodbOurHouseJobs } = this.props.data
-    //const residents = allMongodbOurHouseJobs.edges.find(
-    //  user => user.node.userId === this.state.userId
-    //)
-    //const numResidents = allMongodbOurHouseJobs.edges.length
     const currentUser = this.state.users[this.state.userId].node
     return (
       <Layout>
@@ -73,6 +74,7 @@ class JobsBoard extends Component {
   }
 }
 
+//Graphql query to Madlabs MongoDB
 export const pageQuery = graphql`
   query {
     allMongodbOurHouseJobs {

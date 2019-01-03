@@ -12,8 +12,13 @@ class HeaderNav extends Component {
             </Link>
           </li>
           <li>
-            <Link to="/jobs-board/" style={{ color: '#000000' }}>
-              Jobs Board
+            <Link to="/jobs-by-user/" style={{ color: '#000000' }}>
+              Jobs by User
+            </Link>
+          </li>
+          <li>
+            <Link to="/jobs-by-day/" style={{ color: '#000000' }}>
+              Jobs by Day
             </Link>
           </li>
         </ul>
