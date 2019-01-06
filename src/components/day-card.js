@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-class UserCard extends Component {
+class DayCard extends Component {
   render() {
     return (
       <div
@@ -35,7 +35,7 @@ class UserCard extends Component {
             padding: '0',
           }}
         >
-          {this.props.user}
+          {this.props.day}
         </h2>
         <button
           onClick={this.props.incAction}
@@ -53,8 +53,8 @@ class UserCard extends Component {
           {`>`}
         </button>
       </div>
-    )
+    );
   }
 }
 
-export default UserCard
+export default DayCard;

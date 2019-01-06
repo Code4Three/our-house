@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Link } from 'gatsby'
+import React, { Component } from 'react';
+import { Link } from 'gatsby';
 
 class HeaderNav extends Component {
   render() {
@@ -12,19 +12,14 @@ class HeaderNav extends Component {
             </Link>
           </li>
           <li>
-            <Link to="/jobs-by-user/" style={{ color: '#000000' }}>
-              Jobs by User
-            </Link>
-          </li>
-          <li>
-            <Link to="/jobs-by-day/" style={{ color: '#000000' }}>
-              Jobs by Day
+            <Link to="/jobs-board/" style={{ color: '#000000' }}>
+              Jobs board
             </Link>
           </li>
         </ul>
       </nav>
-    )
+    );
   }
 }
 
-export default HeaderNav
+export default HeaderNav;

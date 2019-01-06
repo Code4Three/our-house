@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 class JobCard extends Component {
   render() {
@@ -12,11 +12,11 @@ class JobCard extends Component {
           color: '#000000',
         }}
       >
-        <h3>{this.props.day}</h3>
+        <h3>{this.props.user}</h3>
         <h4>{this.props.job}</h4>
       </div>
-    )
+    );
   }
 }
 
-export default JobCard
+export default JobCard;

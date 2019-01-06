@@ -1,9 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Our House',
-    description:
-      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    author: '@gatsbyjs',
+    description: 'A website with information for our house',
+    author: 'Sean',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -11,7 +10,7 @@ module.exports = {
       resolve: 'gatsby-source-mongodb',
       options: {
         dbName: `our_house`,
-        collection: `jobs`,
+        collection: [`jobs`, `users`],
         server: { address: `ds041347.mlab.com`, port: `41347` },
         auth: { user: `our_house`, password: `our_house1` },
       },
@@ -41,4 +40,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
   ],
-}
+};
