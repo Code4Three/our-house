@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class JobCard extends Component {
   render() {
     return (
-      <div
+      <li
         style={{
           display: 'flex',
           height: '4rem',
@@ -14,7 +14,7 @@ class JobCard extends Component {
       >
         <h3>{this.props.user}</h3>
         <h4>{this.props.job}</h4>
-      </div>
+      </li>
     );
   }
 }

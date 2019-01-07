@@ -5,17 +5,18 @@ import PropTypes from 'prop-types';
 import HeaderNav from './header-nav';
 
 const Header = ({ siteTitle }) => (
-  <div
+  <header
     style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
+      background: '#0D646A',
+      paddingBottom: '5rem',
+      boxSizing: 'border-box',
     }}
   >
     <div
       style={{
         margin: '0 auto',
         maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
+        padding: '1rem,1rem,10rem,1rem',
       }}
     >
       <h1 style={{ margin: 0 }}>
@@ -31,7 +32,7 @@ const Header = ({ siteTitle }) => (
       </h1>
     </div>
     <HeaderNav />
-  </div>
+  </header>
 );
 
 Header.propTypes = {

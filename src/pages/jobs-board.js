@@ -55,17 +55,13 @@ class JobsBoard extends React.Component {
   }
 
   getDayName() {
-    this.jobData.edges.forEach(e => {
-      if (e.node.dayId == this.state.currentDayId) {
-        console.log(e.node.dayName);
-        return e.node.dayName;
-      }
+    const currentDayId = this.state.currentDayId;
+    const day = this.jobData.edges.filter(function(e) {
+      return e.node.dayId == currentDayId;
     });
+    return day[0].node.dayName;
   }
-
   render() {
-    // console.log(this.state.currentDayId);
-    //console.log(this.jobData.edges[this.state.currentDayId].node.tasks[0].job);
     return (
       <Layout>
         <SEO title="Jobs Board" />
@@ -74,23 +70,14 @@ class JobsBoard extends React.Component {
           decAction={this.decDayId}
           day={this.getDayName()}
         />
+
         <ul>
           {this.jobData.edges[this.state.currentDayId].node.tasks.map(
             (e, index) => {
-              console.log(e);
               return <JobCard key={index} user={e.user} job={e.job} />;
             }
           )}
         </ul>
-        {/*<JobCard user={e.node.tasks[0].user} job={e.node.tasks[0].job} />
-        <JobCard user={'Sean'} job="1" />
-        <JobCard day="Kim" job={currentUser.Tuesday} />
-        <JobCard day="Layla" job={currentUser.Wednesday} />
-        <JobCard day="Thursday" job={currentUser.Thursday} />
-        <JobCard day="Friday" job={currentUser.Friday} />
-        <JobCard day="Saturday" job={currentUser.Saturday} />
-        <JobCard day="Sunday" job={currentUser.Sunday} />
-        */}
       </Layout>
     );
   }
