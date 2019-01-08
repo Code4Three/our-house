@@ -6,7 +6,6 @@ import SEO from '../components/seo';
 import DayCard from '../components/day-card';
 import JobCard from '../components/job-card';
 import { node } from 'prop-types';
-import '../components/main.css';
 
 class JobsBoard extends React.Component {
   constructor(props) {
