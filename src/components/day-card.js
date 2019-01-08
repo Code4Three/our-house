@@ -6,19 +6,26 @@ class DayCard extends Component {
       <div
         style={{
           display: 'flex',
+          flexGrow: '25',
+          width: 'auto',
+          margin: '0.8rem 1.2rem',
+          border: '1px solid var(--light-grey)',
+          borderRadius: '0.2rem',
+          boxShadow: '0.5rem 0.5rem 0.8rem var(--shadow)',
+          backgroundColor: 'var(--med-grey)',
         }}
       >
         <button
           onClick={this.props.decAction}
           style={{
-            flexGrow: 1,
-            height: '4rem',
+            flexGrow: '1',
             width: 'auto',
-            backgroundColor: '#000000',
-            color: '#ffffff',
             margin: '0',
             border: '0',
-            padding: '1',
+            borderRadius: '0.2rem',
+            padding: '0',
+            backgroundColor: 'var(--med-grey)',
+            color: '#ffffff',
           }}
         >
           {`<`}
@@ -26,13 +33,12 @@ class DayCard extends Component {
         <h2
           style={{
             flexGrow: 4,
-            height: '4rem',
             width: 'auto',
-            backgroundColor: '#000000',
-            color: '#ffffff',
             margin: '0',
             border: '0',
             padding: '0',
+            backgroundColor: 'var(--med-grey)',
+            color: '#ffffff',
           }}
         >
           {this.props.day}
@@ -40,14 +46,14 @@ class DayCard extends Component {
         <button
           onClick={this.props.incAction}
           style={{
-            flexGrow: 1,
-            height: '4rem',
+            flexGrow: '1',
             width: 'auto',
-            backgroundColor: '#000000',
-            color: '#ffffff',
             margin: '0',
             border: '0',
-            padding: '1',
+            borderRadius: '0.2rem',
+            padding: '0',
+            backgroundColor: 'var(--med-grey)',
+            color: '#ffffff',
           }}
         >
           {`>`}

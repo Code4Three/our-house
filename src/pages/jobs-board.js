@@ -6,6 +6,7 @@ import SEO from '../components/seo';
 import DayCard from '../components/day-card';
 import JobCard from '../components/job-card';
 import { node } from 'prop-types';
+import '../components/main.css';
 
 class JobsBoard extends React.Component {
   constructor(props) {
@@ -71,7 +72,13 @@ class JobsBoard extends React.Component {
           day={this.getDayName()}
         />
 
-        <ul>
+        <ul
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            flexGrow: '75',
+          }}
+        >
           {this.jobData.edges[this.state.currentDayId].node.tasks.map(
             (e, index) => {
               return <JobCard key={index} user={e.user} job={e.job} />;

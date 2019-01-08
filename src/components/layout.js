@@ -18,20 +18,10 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <div className="main-wrapper">
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          className="wrapper"
-          style={{
-            margin: '-6rem auto 0 auto',
-            maxWidth: 960,
-            marginBottom: '2rem',
-            padding: '0.5rem 0.5rem 0.5rem 0.5rem',
-          }}
-        >
-          {children}
-        </div>
-      </>
+        <div className="content-wrapper">{children}</div>
+      </div>
     )}
   />
 );
