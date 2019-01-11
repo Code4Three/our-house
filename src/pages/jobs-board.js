@@ -63,6 +63,15 @@ class JobsBoard extends React.Component {
     });
     return day[0].node.dayName;
   }
+
+  getTasks() {
+    const currentDayId = this.state.currentDayId;
+    const tasks = this.jobData.edges.filter(function(e) {
+      return e.node.dayId == currentDayId;
+    });
+    return tasks;
+  }
+
   render() {
     return (
       <Layout>
@@ -80,11 +89,9 @@ class JobsBoard extends React.Component {
             flexGrow: '70',
           }}
         >
-          {this.jobData.edges[this.state.currentDayId].node.tasks.map(
-            (e, index) => {
-              return <JobCard key={index} user={e.user} job={e.job} />;
-            }
-          )}
+          {this.getTasks().map((e, index) => {
+            return <JobCard key={index} user={e.user} job={e.job} />;
+          })}
         </ul>
       </Layout>
     );
