@@ -5,7 +5,6 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import DayCard from '../components/day-card';
 import JobCard from '../components/job-card';
-import { node } from 'prop-types';
 
 import '../components/layout.css';
 
@@ -59,7 +58,7 @@ class JobsBoard extends React.Component {
   getData() {
     const currentDayId = this.state.currentDayId;
     const data = this.jobData.edges.filter(function(e) {
-      return e.node.dayId == currentDayId;
+      return parseInt(e.node.dayId) === currentDayId;
     });
     return data;
   }
