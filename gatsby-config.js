@@ -5,7 +5,17 @@ module.exports = {
     author: 'Sean',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          // `limelight`,
+          `lato`,
+          //`source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
+        ],
+      },
+    },
     {
       resolve: 'gatsby-source-mongodb',
       options: {

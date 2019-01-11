@@ -6,20 +6,22 @@ class JobCard extends Component {
       <li
         style={{
           display: 'flex',
+          justifyContent: 'space-between',
           flexGrow: '1',
           width: 'auto',
-          margin: '0.8rem 1.2rem',
-          border: '0',
-          borderRadius: '0.2rem',
+          margin: '0.8rem 1.2rem 0 1.2rem',
+          padding: '0.4rem 2rem 0.4rem 0.8rem',
           border: '1px solid #121212',
-          padding: '1',
+          borderRadius: '0.2rem',
           backgroundColor: 'var(--light-grey)',
           color: '#000000',
           boxShadow: '0.5rem 0.5rem 0.8rem var(--shadow)',
         }}
       >
-        <h3>{this.props.user}</h3>
-        <h4>{this.props.job}</h4>
+        <h3 style={{ alignSelf: 'top', color: 'var(--dark-grey)' }}>
+          {this.props.user}
+        </h3>
+        <h4 style={{ alignSelf: 'flex-end' }}>{this.props.job}</h4>
       </li>
     );
   }

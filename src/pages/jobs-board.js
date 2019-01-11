@@ -7,6 +7,8 @@ import DayCard from '../components/day-card';
 import JobCard from '../components/job-card';
 import { node } from 'prop-types';
 
+import '../components/layout.css';
+
 class JobsBoard extends React.Component {
   constructor(props) {
     super(props);
@@ -75,7 +77,7 @@ class JobsBoard extends React.Component {
           style={{
             display: 'flex',
             flexDirection: 'column',
-            flexGrow: '75',
+            flexGrow: '70',
           }}
         >
           {this.jobData.edges[this.state.currentDayId].node.tasks.map(

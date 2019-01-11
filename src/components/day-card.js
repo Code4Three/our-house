@@ -6,10 +6,11 @@ class DayCard extends Component {
       <div
         style={{
           display: 'flex',
-          flexGrow: '25',
+          flexGrow: '30',
+          minHeight: '4rem',
           width: 'auto',
           margin: '0.8rem 1.2rem',
-          border: '1px solid var(--light-grey)',
+          border: '1px solid var(--dark-grey)',
           borderRadius: '0.2rem',
           boxShadow: '0.5rem 0.5rem 0.8rem var(--shadow)',
           backgroundColor: 'var(--med-grey)',
@@ -18,8 +19,7 @@ class DayCard extends Component {
         <button
           onClick={this.props.decAction}
           style={{
-            flexGrow: '1',
-            width: 'auto',
+            width: '2rem',
             margin: '0',
             border: '0',
             borderRadius: '0.2rem',
@@ -32,7 +32,10 @@ class DayCard extends Component {
         </button>
         <h2
           style={{
-            flexGrow: 4,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexGrow: 1,
             width: 'auto',
             margin: '0',
             border: '0',
@@ -46,8 +49,7 @@ class DayCard extends Component {
         <button
           onClick={this.props.incAction}
           style={{
-            flexGrow: '1',
-            width: 'auto',
+            width: '2rem',
             margin: '0',
             border: '0',
             borderRadius: '0.2rem',

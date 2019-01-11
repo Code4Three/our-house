@@ -20,21 +20,17 @@ class HeaderNav extends Component {
 
   render() {
     return (
-      <nav>
+      <nav id="header-nav">
         <button id="nav-button">
-          <img id="nav-hamburger" src={hamburger} alt="Menu" />
+          <img id="hamburger-image" src={hamburger} alt="Menu" />
         </button>
         <div id="nav-drop-down">
           <ul id="nav-ul">
-            <li class="nav-item">
-              <Link to="/" style={{ color: '#000000' }}>
-                Home
-              </Link>
+            <li className="nav-item">
+              <Link to="/">Home</Link>
             </li>
-            <li class="nav-item">
-              <Link to="/jobs-board/" style={{ color: '#000000' }}>
-                Jobs board
-              </Link>
+            <li className="nav-item">
+              <Link to="/jobs-board/">Jobs board</Link>
             </li>
           </ul>
         </div>
