@@ -5,10 +5,6 @@ import './header-nav.css';
 import hamburger from '../images/hamburger.svg';
 
 class HeaderNav extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     let clickDiv = document.getElementById('nav-button');
     let changeDiv = document.getElementById('nav-drop-down');
