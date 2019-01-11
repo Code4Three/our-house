@@ -61,7 +61,6 @@ class JobsBoard extends React.Component {
     const data = this.jobData.edges.filter(function(e) {
       return e.node.dayId == currentDayId;
     });
-    console.log(data);
     return data;
   }
 
