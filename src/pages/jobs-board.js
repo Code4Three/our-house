@@ -56,20 +56,13 @@ class JobsBoard extends React.Component {
     }
   }
 
-  getDayName() {
+  getData() {
     const currentDayId = this.state.currentDayId;
-    const day = this.jobData.edges.filter(function(e) {
+    const data = this.jobData.edges.filter(function(e) {
       return e.node.dayId == currentDayId;
     });
-    return day[0].node.dayName;
-  }
-
-  getTasks() {
-    const currentDayId = this.state.currentDayId;
-    const tasks = this.jobData.edges.filter(function(e) {
-      return e.node.dayId == currentDayId;
-    });
-    return tasks;
+    console.log(data);
+    return data;
   }
 
   render() {
@@ -79,7 +72,7 @@ class JobsBoard extends React.Component {
         <DayCard
           incAction={this.incDayId}
           decAction={this.decDayId}
-          day={this.getDayName()}
+          day={this.getData()[0].node.dayName}
         />
 
         <ul
@@ -89,7 +82,7 @@ class JobsBoard extends React.Component {
             flexGrow: '70',
           }}
         >
-          {this.getTasks().map((e, index) => {
+          {this.getData()[0].node.tasks.map((e, index) => {
             return <JobCard key={index} user={e.user} job={e.job} />;
           })}
         </ul>
