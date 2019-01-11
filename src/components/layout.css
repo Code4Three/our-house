@@ -1,8 +1,9 @@
 :root {
   --green: #0d646a;
+  --light-light-grey: #feffff;
   --light-grey: #dfdfdf;
-  --med-grey: #131313;
-  --dark-grey: #454545;
+  --med-grey: #454545;
+  --dark-grey: #131313;
 
   --shadow: rgba(0, 0, 0, 0.4);
 
@@ -16,18 +17,19 @@ html {
 body {
   height: 100vh;
   margin: 0;
-  background-color: var(--dark-grey);
-}
-
-body > div,
-body > div > div {
-  height: 100%;
+  padding: 0;
+  border: 0;
+  background-color: var(--med-grey);
 }
 
 .main-wrapper {
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
 .content-wrapper {
@@ -306,6 +308,7 @@ h4 {
   text-rendering: optimizeLegibility;
   font-size: 3.2rem;
   line-height: 1;
+  letter-spacing: 0.2rem;
 }
 h5 {
   margin-left: 0;

@@ -47,7 +47,7 @@
   margin: 0;
   padding: 0;
   border: 0;
-  background-color: var(--med-grey);
+  background-color: var(--dark-grey);
 }
 
 .nav-item {
@@ -69,6 +69,6 @@
   padding: 0.6rem;
   border-radius: 0.1rem;
   text-decoration: none;
-  background-color: var(--med-grey);
+  background-color: var(--dark-grey);
   color: #ffffff;
 }

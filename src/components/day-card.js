@@ -6,14 +6,14 @@ class DayCard extends Component {
       <div
         style={{
           display: 'flex',
-          flexGrow: '30',
+          flexGrow: '50',
           minHeight: '4rem',
           width: 'auto',
           margin: '0.8rem 1.2rem',
-          border: '1px solid var(--dark-grey)',
+          border: '1px solid var(--dmed-grey)',
           borderRadius: '0.2rem',
           boxShadow: '0.5rem 0.5rem 0.8rem var(--shadow)',
-          backgroundColor: 'var(--med-grey)',
+          backgroundColor: 'var(--dark-grey)',
         }}
       >
         <button
@@ -24,7 +24,7 @@ class DayCard extends Component {
             border: '0',
             borderRadius: '0.2rem',
             padding: '0',
-            backgroundColor: 'var(--med-grey)',
+            backgroundColor: 'var(--dark-grey)',
             color: '#ffffff',
           }}
         >
@@ -40,7 +40,7 @@ class DayCard extends Component {
             margin: '0',
             border: '0',
             padding: '0',
-            backgroundColor: 'var(--med-grey)',
+            backgroundColor: 'var(--dark-grey)',
             color: '#ffffff',
           }}
         >
@@ -54,7 +54,7 @@ class DayCard extends Component {
             border: '0',
             borderRadius: '0.2rem',
             padding: '0',
-            backgroundColor: 'var(--med-grey)',
+            backgroundColor: 'var(--dark-grey)',
             color: '#ffffff',
           }}
         >

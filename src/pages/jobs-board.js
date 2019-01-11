@@ -77,7 +77,7 @@ class JobsBoard extends React.Component {
           style={{
             display: 'flex',
             flexDirection: 'column',
-            flexGrow: '70',
+            flexGrow: '65',
           }}
         >
           {this.getData()[0].node.tasks.map((e, index) => {
