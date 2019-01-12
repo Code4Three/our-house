@@ -6,11 +6,12 @@ import hamburger from '../images/hamburger.svg';
 
 class HeaderNav extends Component {
   componentDidMount() {
-    let clickDiv = document.querySelector('#navButtonClick');
-    let changeDiv = document.querySelector('#navDropDownSlide');
+    let clickDiv = document.getElementById('navButtonClick');
+    let changeDiv = document.getElementById('navSliderSlide');
 
     clickDiv.addEventListener('click', function() {
       changeDiv.classList.toggle('easeOut');
+      console.log(changeDiv);
     });
   }
 
@@ -18,9 +19,13 @@ class HeaderNav extends Component {
     return (
       <nav className={styles.headerNav}>
         <button id="navButtonClick" className={styles.navButton}>
-          <img className={styles.hamburgerImage} src={hamburger} alt="Menu" />
+          <img
+            className={styles.hamburgerImage}
+            src={hamburger}
+            alt="Navigation"
+          />
         </button>
-        <div id="navDropDownSlide" className={styles.navDropDown}>
+        <div id="navSliderSlide" className={styles.navSlider}>
           <ul className={styles.navItems}>
             <li className={styles.navItem}>
               <Link to="/">Home</Link>

@@ -24,7 +24,7 @@
   z-index: 1;
 }
 
-.navDropDown {
+.navSlider {
   display: flex;
   height: 5rem;
   margin-left: -100vw;
@@ -33,7 +33,7 @@
   transition: all 1.2s;
 }
 
-.navDropDown.easeOut {
+.easeOut {
   display: flex;
   transform: translate(98vw);
   margin-top: 0rem;
