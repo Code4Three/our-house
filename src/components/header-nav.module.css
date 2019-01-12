@@ -1,8 +1,8 @@
-#header-nav {
+.headerNav {
   position: absolute;
 }
 
-#nav-button {
+.navButton {
   display: flex;
   grid-column-start: 1;
   grid-row-start: 1;
@@ -15,7 +15,7 @@
   background-color: var(--green);
 }
 
-#hamburger-image {
+.hamburgerImage {
   display: flex;
   grid-column-start: 1;
   grid-row-start: 1;
@@ -24,7 +24,7 @@
   z-index: 1;
 }
 
-#nav-drop-down {
+.navDropDown {
   display: flex;
   height: 5rem;
   margin-left: -100vw;
@@ -33,13 +33,13 @@
   transition: all 1.2s;
 }
 
-#nav-drop-down.ease-out {
+.navDropDown.easeOut {
   display: flex;
   transform: translate(98vw);
   margin-top: 0rem;
 }
 
-#nav-ul {
+.navItems {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -50,7 +50,7 @@
   background-color: var(--dark-grey);
 }
 
-.nav-item {
+.navItem {
   display: flex;
   margin: 0;
   padding: 0 1rem;
@@ -58,11 +58,11 @@
   border-right: 0.15rem solid #3c3c3c;
 }
 
-.nav-item:last-child {
+.navItem:last-child {
   border-bottom: 0.15rem solid #3c3c3c;
 }
 
-.nav-item a {
+.navItem a {
   display: flex;
   width: 8rem;
   margin: 0;
