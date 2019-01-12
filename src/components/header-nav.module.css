@@ -27,14 +27,11 @@
 .navSlider {
   display: flex;
   height: 5rem;
-  margin-left: -100vw;
+  margin-left: -14rem;
   grid-column-start: 1;
   grid-row: 1;
-  transition: all 1.2s;
-}
-
-.easeOut {
-  transform: translate(98vw);
+  transition: all 0.8s;
+  transition-timing-function: cubic-bezier(0.15, 1.19, 1, 1.16);
 }
 
 .navItems {
@@ -51,7 +48,7 @@
 .navItem {
   display: flex;
   margin: 0;
-  padding: 0 1rem;
+  padding: 0 0 0 2.4rem;
   border-top: 0.15rem solid #3c3c3c;
   border-right: 0.15rem solid #3c3c3c;
 }
@@ -66,6 +63,7 @@
   margin: 0;
   padding: 0.6rem;
   border-radius: 0.1rem;
+  box-sizing: border-box;
   text-decoration: none;
   background-color: var(--dark-grey);
   color: #ffffff;

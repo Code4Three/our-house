@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'gatsby';
 
 import styles from './header-nav.module.css';
+import './transforms.css';
 import hamburger from '../images/hamburger.svg';
 
 class HeaderNav extends Component {
@@ -10,7 +11,7 @@ class HeaderNav extends Component {
     let changeDiv = document.getElementById('navSliderSlide');
 
     clickDiv.addEventListener('click', function() {
-      changeDiv.classList.toggle('easeOut');
+      changeDiv.classList.toggle('easy');
       console.log(changeDiv);
     });
   }

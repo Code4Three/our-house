@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-grow: 50;
+  min-height: 4rem;
+  width: auto;
+  margin: 0.8rem 1.2rem;
+  border: 1px solid var(--med-grey);
+  border-radius: 0.2rem;
+  box-shadow: 0.5rem 0.5rem 0.8rem var(--shadow);
+  background-color: var(--dark-grey);
+  color: var(--light-light-grey);
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: auto;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background-color: var(--dark-grey);
+  color: #ffffff;
+}

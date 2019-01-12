@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import MainCard from '../components/main-card.js';
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 class IndexPage extends Component {
   render() {
@@ -11,9 +12,10 @@ class IndexPage extends Component {
           title="Our House"
           keywords={['gatsby', 'application', 'react', 'Our House']}
         />
+        <MainCard />
       </Layout>
-    )
+    );
   }
 }
 
-export default IndexPage
+export default IndexPage;
