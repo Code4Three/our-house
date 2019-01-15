@@ -31,7 +31,8 @@
   grid-column-start: 1;
   grid-row: 1;
   transition: all 0.8s;
-  transition-timing-function: cubic-bezier(0.15, 1.19, 1, 1.16);
+  transition-timing-function: cubic-bezier(0.25, 1.13, 0.6, 1.21);
+  /*0.15, 1.19, 1, 1.16*/
 }
 
 .navItems {
