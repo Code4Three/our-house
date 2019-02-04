@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  min-height: 10rem;
+  min-height: 8rem;
   width: auto;
   margin: 0.8rem 1.2rem;
   border: 1px solid var(--med-grey);
