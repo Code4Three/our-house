@@ -1,0 +1,8 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  background: #0d646a;
+  padding: 0.3rem 2rem 5rem 0;
+  box-sizing: border-box;
+  box-shadow: 0 0.5rem 0.8rem var(--shadow);
+}

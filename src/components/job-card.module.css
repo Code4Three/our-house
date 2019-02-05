@@ -19,6 +19,6 @@
 }
 
 .job {
-  align-self: center;
+  align-self: flex-start;
   color: var(--dark-grey);
 }
