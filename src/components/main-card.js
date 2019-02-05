@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './main-card.module.css';
-import house from '../images/house.png';
+import mainImage from '../images/hugo.png';
 
 class MainCard extends React.Component {
   render() {
     return (
       <div className={styles.container}>
-        <img className={styles.mainImage} src={house} alt="Our House" />
+        {/*<img className={styles.mainImage} src={mainImage} alt="Our House" />*/}
       </div>
     );
   }
