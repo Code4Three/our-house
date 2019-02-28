@@ -18,7 +18,7 @@ module.exports = {
         dbName: `our_house`,
         collection: [`jobs`, `users`],
         server: { address: `ds041347.mlab.com`, port: `41347` },
-        auth: { user: `our_house`, password: `our_house1` },
+        auth: { user: `ourHouse`, password: `ourHouse1` },
       },
     },
     /*{
