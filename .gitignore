@@ -1,3 +1,6 @@
+#Info files
+.info
+
 # Logs
 logs
 *.log
